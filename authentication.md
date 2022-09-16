@@ -65,7 +65,7 @@
 
 
 # JWT - JSON Web Token
-JWT is an open standard for Authorization.
+JWT is an open standard for authorization.
 
 ## Features
 - Self-contained, URL-safe
@@ -135,3 +135,17 @@ the JWT token or perform requests using that token.
 - Data in client's token can become out of sync with server (name, permissions,
   etc.)
 - Vulnerable to XSS attacks unless all user input is sanitized
+
+
+# Types of client storage (browser storage)
+
+- Cookies - the oldest way to store data on the client side. Used for user
+  personalization, session ID and access tokens.
+- Web Storage API - used for smaller key-value data items, such as user's name,
+  whether they are logged in, personalization, etc.
+    - sessionStorage - persists data as long as browser is open
+    - localStorage - persists data even when browser fully restarts
+- IndexedDB API - a complete DB for storing complex data (e.g audio/video files)
+- Cache API - designed to store HTTP responses to specific requests. Useful for
+  storing website assets offline. Often used in combination with Service Worker
+  API.
